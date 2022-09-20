@@ -1,0 +1,36 @@
+{% extends 'basic.html' %}
+
+{% block content %}
+
+<h1>Regression Calculator</h1>
+<div class="FormContainer">
+    <form action="calculate" method="POST">
+        {% csrf_token %}
+
+        Enter Weight: <input type="text" name="weight"> 
+        &nbsp <input type ="radio" id ="kg" name="WeightUnit" value="kg">  
+        <label for "kg">Kg</label>
+        &nbsp <input type ="radio" id="lb" name="WeightUnit" value="lb">
+        <label for "lb">lb</label>
+        <br><br>
+        Enter Height: <input type="text" name="height">
+        &nbsp <input type ="radio" id ="cm" name="HeightUnit" value="cm">  
+        <label for "cm">cm</label>
+        &nbsp <input type ="radio" id="in" name="HeightUnit" value="in">
+        <label for "in">in</label>
+        <br><br>
+        <!--<Enter Sex: <input type="text" name="sex"><br><br>-->
+        Sex: <br><br>
+        <input type="radio" id ="male" name ="sex" value="Male">
+        <label for "male">Male</label><br>
+        <input type="radio" id="female" name ="sex" value="Female">
+        <label for "female">Female</label><br>
+        <br>
+        Enter Age: <input type="text" name="age"><br><br>
+        <input type="submit">
+    </form>
+    <br><br>
+    <a href="https://github.com/jnjames5/MuscleRegressionCalculator">Download the python software here</a>
+</div>
+
+{% endblock %}
